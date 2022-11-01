@@ -34,8 +34,15 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         super.onResume()
 
         binding.tvLogin.setOnClickListener {
-            if (binding.etPhone.text!!.length != 9) {
+            val phone = binding.etPhone.text.toString().trim()
+
+            if (phone.length != 9) {
                 toast(getString(R.string.enter_valid_phone))
+                return@setOnClickListener
+            }
+
+            if (!phone.startsWith("59") && !phone.startsWith("56")) {
+                toast(getString(R.string.should_start_with_valid_suffix_number))
                 return@setOnClickListener
             }
 
@@ -43,7 +50,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             binding.pb.visibility = View.VISIBLE
 
             val options = PhoneAuthOptions.newBuilder(Firebase.auth)
-                .setPhoneNumber(COUNTRY_PHONE_CODE + binding.etPhone.text.toString())
+                .setPhoneNumber(COUNTRY_PHONE_CODE + phone)
                 .setTimeout(120L, TimeUnit.SECONDS)
                 .setActivity(requireActivity())
                 .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {

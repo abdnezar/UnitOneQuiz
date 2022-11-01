@@ -12,6 +12,15 @@
         android:layout_gravity="start|center_vertical"
         android:src="@drawable/ic_close"/>
 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivUserAvatar"
         android:layout_width="@dimen/_25sdp"

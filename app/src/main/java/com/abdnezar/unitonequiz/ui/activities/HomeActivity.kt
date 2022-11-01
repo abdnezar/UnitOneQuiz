@@ -3,6 +3,7 @@ package com.abdnezar.unitonequiz.ui.activities
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -37,11 +38,17 @@ class HomeActivity : AppCompatActivity() {
         listener = NavController.OnDestinationChangedListener { _, navDestination, _ ->
             when (navDestination.id) {
                 R.id.homeFragment -> {
+                    v.bottomAppBar.visibility = View.VISIBLE
+
+                    customAB.findViewById<TextView>(R.id.tvTitle).text = getString(R.string.home)
                     customAB.findViewById<ImageView>(R.id.ivClose).visibility = View.GONE
                     if (userAuth.currentUser != null)
                         customAB.findViewById<ImageView>(R.id.ivUserAvatar).visibility = View.VISIBLE
                 }
                 R.id.loginFragment -> {
+                    v.bottomAppBar.visibility = View.GONE
+
+                    customAB.findViewById<TextView>(R.id.tvTitle).text = getString(R.string.login)
                     customAB.findViewById<ImageView>(R.id.ivClose).visibility = View.VISIBLE
                     customAB.findViewById<ImageView>(R.id.ivUserAvatar).visibility = View.GONE
                 }
