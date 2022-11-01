@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/phone_placeholder"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/main_color"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/login_using_mobile_number_otp"/>
+        </LinearLayout>
+
+        <include layout="@layout/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:background="@drawable/dark_blue_stroke"
+            android:padding="@dimen/_3sdp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:text="@string/_970"
+                app:drawableStartCompat="@drawable/ps_flag" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="phone"
+                android:maxLength="9"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center">
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/otpView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:foregroundGravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/main_color"
+                app:height="40dp"
+                app:width="40dp"
+                app:bar_enabled="true"
+                app:bar_height="2dp"
+                app:length="6"
+                app:otp_text_size="24dp"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:background="@drawable/dark_blue_bg"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/send_code"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+        <include layout="@layout/divider"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:textColor="@color/main_color"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/using_other_methods"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/img_email"
+                android:layout_margin="@dimen/_5sdp"/>
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/img_apple"
+                android:layout_margin="@dimen/_5sdp"/>
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/img_facebook"
+                android:layout_margin="@dimen/_5sdp"/>
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/img_google"
+                android:layout_margin="@dimen/_5sdp"/>
+        </LinearLayout>
+
+        <include layout="@layout/divider"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/don_t_have_an_account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:textColor="@color/third_color"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/create_new_account"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/light_blue_bg"
+    android:layout_width="@dimen/_120sdp"
+    android:layout_margin="@dimen/_8sdp"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_3sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivCity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/img"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/tvCityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/alpha_bottom_to_up"
+                android:gravity="start"
+                android:text="Hello World!"
+                android:fontFamily="@font/roboto_light"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

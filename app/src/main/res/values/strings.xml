@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">UnitOneQuiz</string>
+    <string name="can_not_get_sliders">Can\'t get Sliders at this moment, try again later</string>
+    <string name="can_not_get_cities">Can\'t get Cities at this moment, try again later</string>
+    <string name="login_using_mobile_number_otp">Login using mobile number OTP</string>
+    <string name="send_code">Send Code</string>
+    <string name="_970">+970</string>
+    <string name="using_other_methods">Using other methods</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="create_new_account">Create new account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_valid_phone">Please enter a valid phone number(9 digits)</string>
+    <string name="img">img</string>
+</resources>

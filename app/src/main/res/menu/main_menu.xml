@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/miFlights"
+        android:title="miFlights"
+        android:icon="@drawable/ic_flight" />
+
+    <item android:id="@+id/miSearch"
+        android:title="Hotels"
+        android:icon="@drawable/ic_hotels" />
+
+    <item android:id="@+id/miHome"
+        android:title="" />
+
+    <item android:id="@+id/miProfile"
+        android:title="miSearch"
+        android:icon="@drawable/ic_search" />
+
+    <item android:id="@+id/miSettings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings" />
+</menu>
